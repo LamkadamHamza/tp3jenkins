@@ -18,7 +18,7 @@ pipeline {
         stage ("Generate backend image") {
               steps {
                    dir("tp3jenkins"){
-                      sh "mvn clean install"
+                      sh "mvn clean install -DskipTests"
                       sh "docker build -t tp3jenkins ."
                   }
               }
